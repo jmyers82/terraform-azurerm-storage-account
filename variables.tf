@@ -29,6 +29,7 @@ variable "environment" {
 variable "sa_name" {
   description = "The name of the storage account"
   type        = string
+  default     = "randomsa"
   validation {
     condition     = length(var.sa_name) < 24
     error_message = "The storage account name must be less than 24 characters long"
@@ -61,3 +62,12 @@ variable "subscription_id" {
 
 }
 
+variable "private_endpoint_subnet_id" {
+  description = "The ID of the subnet in which to create the private endpoint"
+  type        = string
+}
+
+variable "private_endpoint_zone_id" {
+  description = "The ID of the private DNS zone to use for the private endpoint"
+  type        = string
+}
