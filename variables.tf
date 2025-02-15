@@ -62,12 +62,12 @@ variable "subscription_id" {
 
 }
 
-variable "private_endpoint_subnet_id" {
-  description = "The ID of the subnet in which to create the private endpoint"
-  type        = string
-}
+# variable "private_endpoint_subnet_id" {
+#   description = "The ID of the subnet in which to create the private endpoint"
+#   type        = string
+# }
 
-variable "private_endpoint_zone_id" {
-  description = "The ID of the private DNS zone to use for the private endpoint"
-  type        = string
-}
+# variable "private_endpoint_zone_id" {
+#   description = "The ID of the private DNS zone to use for the private endpoint"
+#   type        = string
+# }

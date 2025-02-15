@@ -1,0 +1,2 @@
+    private_endpoint_subnet_id = "/subscriptions/57124af2-ec2e-466c-a744-c046ea95c09a/resourceGroups/hashitalks-network/providers/Microsoft.Network/virtualNetworks/hashitalks-vnet/subnets/private-endpoints"
+    private_endpoint_zone_id   = "/subscriptions/57124af2-ec2e-466c-a744-c046ea95c09a/resourceGroups/hashitalks-network/providers/Microsoft.Network/privateDnsZones/privatelink.blob.core.windows.net"
