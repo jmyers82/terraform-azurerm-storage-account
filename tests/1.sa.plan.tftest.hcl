@@ -1,10 +1,13 @@
+#################################################
+# Setup RG for Storage Account Tests
 run "setup_rg" {
   module {
     source = "./tests/setup"
   }
 }
 
-
+#################################################
+# Test Plan for Storage Account
 run "create_sa_plan" {
   command = plan
   variables {
@@ -17,6 +20,7 @@ run "create_sa_plan" {
     rg_name                  = run.setup_rg.rg_name
   }
 
+# Validate the Storage Account Name
   assert {
     condition     = azurerm_storage_account.sa.name == "hashitalkbasic${run.setup_rg.sa_pet_name}"
     error_message = "Storage account name is incorrect"
@@ -27,4 +31,3 @@ run "create_sa_plan" {
   #   error_message = "Primary access key is null"
   # }
 }
-
