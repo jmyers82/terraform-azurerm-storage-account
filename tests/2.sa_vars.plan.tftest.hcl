@@ -21,8 +21,8 @@ variables {
 run "create_bad_sa_name_chars" {
   command = plan
   variables {
-    sa_name                  = "hashitalkbasic-${run.setup_rg.sa_pet_name}"
-    rg_name                  = run.setup_rg.rg_name
+    sa_name = "hashitalkbasic-${run.setup_rg.sa_pet_name}"
+    rg_name = run.setup_rg.rg_name
   }
 
   expect_failures = [var.sa_name]
@@ -33,8 +33,8 @@ run "create_bad_sa_name_chars" {
 run "create_bad_sa_name_length" {
   command = plan
   variables {
-    sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}1234567890"
-    rg_name                  = run.setup_rg.rg_name
+    sa_name = "hashitalkbasic${run.setup_rg.sa_pet_name}1234567890"
+    rg_name = run.setup_rg.rg_name
   }
 
   expect_failures = [var.sa_name]
@@ -45,10 +45,10 @@ run "create_bad_sa_name_length" {
 run "create_bad_sa_location" {
   command = plan
   variables {
-    sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}"
-    rg_name                  = run.setup_rg.rg_name
+    sa_name = "hashitalkbasic${run.setup_rg.sa_pet_name}"
+    rg_name = run.setup_rg.rg_name
     # location                 = "centralus"
-    location                 = "EuropeWest"
+    location = "EuropeWest"
   }
 
   expect_failures = [var.location]
@@ -59,10 +59,10 @@ run "create_bad_sa_location" {
 run "create_bad_sa_combo" {
   command = plan
   variables {
-    sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}"
-    rg_name                  = run.setup_rg.rg_name
-    location                 = "EuropeWest"
-    environment              = "uat"
+    sa_name     = "hashitalkbasic${run.setup_rg.sa_pet_name}"
+    rg_name     = run.setup_rg.rg_name
+    location    = "EuropeWest"
+    environment = "uat"
   }
 
   expect_failures = [var.environment, var.location]

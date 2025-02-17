@@ -24,7 +24,7 @@ run "create_sa_plan" {
     rg_name                  = run.setup_rg.rg_name
   }
 
-# Validate the Storage Account Name
+  # Validate the Storage Account Name
   assert {
     condition     = azurerm_storage_account.sa.name == "hashitalkbasic${run.setup_rg.sa_pet_name}"
     error_message = "Storage account name is incorrect"

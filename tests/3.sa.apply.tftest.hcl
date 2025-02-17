@@ -19,17 +19,20 @@ variables {
 
 # Test Plan for Storage Account
 run "create_sa_stnd_apply" {
-    sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}"
-    rg_name                  = run.setup_rg.rg_name
+  variables {
+    sa_name = "hashitalkbasic${run.setup_rg.sa_pet_name}"
+    rg_name = run.setup_rg.rg_name
+
+  }
 }
 
 # Test Plan for Storage Account - Change Tag
 run "create_sa_change_tag_apply" {
   command = apply
   variables {
-    environment              = "prod"  ## Change from dev to prod
-    sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}"
-    rg_name                  = run.setup_rg.rg_name
+    environment = "prod" ## Change from dev to prod
+    sa_name     = "hashitalkbasic${run.setup_rg.sa_pet_name}"
+    rg_name     = run.setup_rg.rg_name
 
   }
 }
