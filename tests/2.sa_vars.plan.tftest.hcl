@@ -45,7 +45,7 @@ run "create_bad_sa_name_length" {
 run "create_bad_sa_location" {
   command = plan
   variables {
-    sa_name                  = "hashitalkbasic-${run.setup_rg.sa_pet_name}"
+    sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}"
     rg_name                  = run.setup_rg.rg_name
     # location                 = "centralus"
     location                 = "EuropeWest"
@@ -59,7 +59,7 @@ run "create_bad_sa_location" {
 run "create_bad_sa_combo" {
   command = plan
   variables {
-    sa_name                  = "hashitalkbasic-${run.setup_rg.sa_pet_name}"
+    sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}"
     rg_name                  = run.setup_rg.rg_name
     location                 = "EuropeWest"
     environment              = "uat"
