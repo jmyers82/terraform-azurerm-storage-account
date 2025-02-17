@@ -5,6 +5,8 @@ provider "azurerm" {
   storage_use_azuread             = true
   subscription_id                 = local.subscription_id
 }
+
+
 terraform {
   required_providers {
     azurerm = {
