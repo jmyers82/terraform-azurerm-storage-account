@@ -1,3 +1,7 @@
+provider "azurerm" {
+  features {}
+}
+
 #################################################
 # Setup RG for Storage Account Tests
 run "setup_rg" {
