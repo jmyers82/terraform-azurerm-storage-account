@@ -16,6 +16,7 @@ variable "cost_center" {
   type        = string
 }
 
+
 variable "environment" {
   description = "The environment to use for this storage account"
   default     = "dev"
@@ -71,3 +72,9 @@ variable "subscription_id" {
 #   description = "The ID of the private DNS zone to use for the private endpoint"
 #   type        = string
 # }
+
+variable "new_var" {
+  description = "value of new_var"
+  type        = string
+  default     = "some value"
+}

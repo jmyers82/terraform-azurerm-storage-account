@@ -26,8 +26,8 @@ run "create_sa_plan" {
     error_message = "Storage account name is incorrect"
   }
 
-  # assert {
-  #   condition     = output.sa_primary_access_key.value != null
-  #   error_message = "Primary access key is null"
-  # }
+  assert {
+    condition     = output.sa_primary_access_key.value != null
+    error_message = "Primary access key is null"
+  }
 }

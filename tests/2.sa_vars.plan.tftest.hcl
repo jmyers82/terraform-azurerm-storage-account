@@ -9,7 +9,7 @@ run "setup_rg" {
 ##############################################################################
 # Global Variables - no need to repeat these in every run
 variables {
-  sa_name                  = "hashitalkbasic-${run.setup_rg.sa_pet_name}"
+  sa_name                  = "hashitalkbasic${run.setup_rg.sa_pet_name}"
   location                 = "eastus"
   account_tier             = "Standard"
   account_replication_type = "LRS"
@@ -45,8 +45,8 @@ run "create_bad_sa_name_length" {
 run "create_bad_sa_location" {
   command = plan
   variables {
-    location                 = "centralus"
-    # location                 = "EuropeWest"
+    # location                 = "centralus"
+    location                 = "EuropeWest"
   }
 
   expect_failures = [var.location]
