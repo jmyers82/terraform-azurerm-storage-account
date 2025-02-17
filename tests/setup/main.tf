@@ -11,7 +11,7 @@ terraform {
       source  = "hashicorp/azurerm"
       version = ">= 2.0"
     }
-    random_pet = {
+    random = {
       source  = "hashicorp/random"
       version = ">= 3.0"
     }
