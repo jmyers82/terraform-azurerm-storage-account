@@ -5,6 +5,18 @@
 #   storage_use_azuread             = true
 #   subscription_id                 = local.subscription_id
 # }
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 2.0"
+    }
+    random_pet = {
+      source  = "hashicorp/random"
+      version = ">= 3.0"
+    }
+  }
+}
 
 #################################################
 # Setup RG for Storage Account Tests
