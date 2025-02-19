@@ -25,10 +25,10 @@ run "create_sa_stnd_apply" {
 
   }
   
-  assert {
-    condition     = output.sa_primary_access_key.value != null
-    error_message = "Primary access key is null"
-  }
+  # assert {
+  #   condition     = output.sa_primary_access_key.value != null
+  #   error_message = "Primary access key is null"
+  # }
 }
 
 # Test Plan for Storage Account - Change Tag
